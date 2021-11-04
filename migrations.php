@@ -3,9 +3,10 @@
 use app\core\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+// Init dotenv package & load .env parameters
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-
 
 // Gather configuration data from .env file.
 $config = [
@@ -19,5 +20,5 @@ $config = [
 // Init application
 $app = new Application(__DIR__, $config);
 
-// Run application
+// Apply migrations
 $app->db->applyMigrations();

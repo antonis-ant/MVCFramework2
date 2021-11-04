@@ -11,6 +11,7 @@ $dotenv->load();
 
 // Gather configuration data from .env file.
 $config = [
+    'userClass' => \app\models\User::class,
     'db' => [
         'dsn' => $_ENV['DB_DSN'],
         'user' => $_ENV['DB_USER'],
@@ -25,6 +26,7 @@ $siteController = new SiteController();
 // Set "GET" routes
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
+$app->router->get('/logout', [AuthController::class, 'logout']); // *** Logout should happen with post method for security reasons!
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
 
