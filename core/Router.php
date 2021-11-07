@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use app\core\exception\NotFoundException;
+
 /**
  * Class Router
  * @package app\core
@@ -57,47 +59,26 @@ class Router
 
         // Callback method was not found, render "Not Found" view.
         if (!$callback) {
-            $this->response->setStatusCode(404);
-            return $this->renderView("_404");
+            throw new NotFoundException();
         }
         // String is given as callback, find & render corresponding view.
         if (is_string($callback)) {
-            return $this->renderView($callback);
+            return Application::$app->view->renderView($callback);
         }
         // Controller class method is given, instantiate new Controller object.
         if (is_array($callback)) {
+            /** @var \app\core\Controller $controller */
             // Set new controller object in Application class
-            Application::$app->controller = new $callback[0]();
-            // Also set instantiated Controller object on 0th index of callback variable
-            $callback[0] = Application::$app->controller;
+            $controller = new $callback[0]();
+            Application::$app->controller = $controller;
+            $controller->action = $callback[1];
+            $callback[0] = $controller;
+
+            foreach ($controller->getMiddleware() as $middleware) {
+                $middleware->execute();
+            }
         }
         // Actual callback function given, call user provided callback.
         return call_user_func($callback, $this->request, $this->response);
-    }
-
-    public function renderView($view, $params = []) {
-        $layoutContent = $this->layoutContent();
-        $viewContent = $this->renderOnlyView($view, $params);
-        // Look for specified placeholder inside layout content and replace it with the specified view content.
-        return str_replace('{{content}}', $viewContent, $layoutContent);
-    }
-
-    protected function layoutContent() {
-        // Start buffering the output of included file below, without displaying it.
-        $layout = Application::$app->controller->layout;
-        ob_start();
-        include_once Application::$ROOT_DIR. "/views/layouts/$layout.php";
-        // Return buffered content & clear buffer.
-        return ob_get_clean();
-    }
-
-    protected function renderOnlyView($view, $params) {
-        // Set parameters to be used in rendered view.
-        foreach ($params as $key => $value) {
-            $$key = $value;
-        }
-        ob_start();
-        include_once Application::$ROOT_DIR. "/views/$view.php";
-        return ob_get_clean();
     }
 }

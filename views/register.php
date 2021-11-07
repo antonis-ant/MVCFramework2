@@ -8,22 +8,22 @@
     <!-- Firstname & lastname fields -->
     <div class="row">
         <div class="col">
-            <?php echo $form->field($model, 'firstname') ?>
+            <?php echo $form->inputField($model, 'firstname') ?>
         </div>
         <div class="col">
-            <?php echo $form->field($model, 'lastname') ?>
+            <?php echo $form->inputField($model, 'lastname') ?>
         </div>
     </div>
 
-    <?php echo $form->field($model, 'email') ?>
+    <?php echo $form->inputField($model, 'email') ?>
 
     <!-- Password & confirm password fields -->
     <div class="row">
         <div class="col">
-            <?php echo $form->field($model, 'password')->passwordField() ?>
+            <?php echo $form->inputField($model, 'password')->passwordField() ?>
         </div>
         <div class="col">
-            <?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
+            <?php echo $form->inputField($model, 'confirmPassword')->passwordField() ?>
         </div>
     </div>
 
