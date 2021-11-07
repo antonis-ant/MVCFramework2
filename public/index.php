@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use antonyant\phpmvc\Application;
 use app\controllers\SiteController;
 use app\controllers\AuthController;
 

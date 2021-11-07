@@ -1,5 +1,5 @@
 <?php
-    use \app\core\Application;
+    use \antonyanant\phpmvc\Application;
 ?>
 <!doctype html>
 <html lang="en">

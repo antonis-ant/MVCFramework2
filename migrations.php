@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use antonyanant\phpmvc\Application;
 
 require_once __DIR__ . '/vendor/autoload.php';
 

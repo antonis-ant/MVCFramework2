@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d8d98e755dcf579489879c1d0946e65",
+    "content-hash": "3a1eaf09fdcf6303aba86604c6bbc274",
     "packages": [
+        {
+            "name": "antonyanant/php-mvc-core",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonyanant/tc-php-mvc-core.git",
+                "reference": "fa2e8d87779a5d8b9a9b2e2f52eed5e050809489"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonyanant/tc-php-mvc-core/zipball/fa2e8d87779a5d8b9a9b2e2f52eed5e050809489",
+                "reference": "fa2e8d87779a5d8b9a9b2e2f52eed5e050809489",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "antonyanant\\phpmvc\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "tonyanant",
+                    "email": "antonis.ant2011@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/tonyanant/tc-php-mvc-core/issues",
+                "source": "https://github.com/tonyanant/tc-php-mvc-core/tree/v1.0.4"
+            },
+            "time": "2021-11-07T11:44:36+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.0.3",
@@ -463,7 +496,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-pdo": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }
