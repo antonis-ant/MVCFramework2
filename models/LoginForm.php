@@ -4,8 +4,8 @@
 namespace app\models;
 
 
-use app\core\Application;
-use app\core\Model;
+use tonyanant\phpmvc\Application;
+use tonyanant\phpmvc\Model;
 
 class LoginForm extends Model
 {

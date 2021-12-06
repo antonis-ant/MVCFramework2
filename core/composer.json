@@ -2,7 +2,7 @@
     "name": "tonyanant/php-mvc-core",
     "autoload": {
         "psr-4": {
-            "Tonyanant\\PhpMvcCore\\": "src/"
+            "tonyanant\\phpmvc\\": "."
         }
     },
     "authors": [

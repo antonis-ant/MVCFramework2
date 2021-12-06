@@ -1,11 +1,11 @@
 <?php
 
 
-namespace app\core\db;
+namespace tonyanant\phpmvc\db;
 
 
-use app\core\Application;
-use app\core\Model;
+use tonyanant\phpmvc\Application;
+use tonyanant\phpmvc\Model;
 
 abstract class DbModel extends Model
 {

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace app\core\form;
+namespace tonyanant\phpmvc\form;
 
 
-use app\core\Model;
+use tonyanant\phpmvc\Model;
 
 abstract class BaseField
 {

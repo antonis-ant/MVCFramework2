@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\core\middleware;
+namespace tonyanant\phpmvc\middleware;
 
 
 abstract class baseMiddleware

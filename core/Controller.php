@@ -1,17 +1,17 @@
 <?php
 
 
-namespace app\core;
+namespace tonyanant\phpmvc;
 
 
-use app\core\middleware\baseMiddleware;
+use tonyanant\phpmvc\middleware\baseMiddleware;
 
 class Controller
 {
     public string $layout = 'main';
     public string $action = '';
     /**
-     * @var \app\core\middleware\BaseMiddleware[]
+     * @var \tonyanant\phpmvc\middleware\BaseMiddleware[]
      */
     protected array $middleware = [];
 

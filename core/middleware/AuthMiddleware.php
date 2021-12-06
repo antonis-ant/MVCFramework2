@@ -1,11 +1,11 @@
 <?php
 
 
-namespace app\core\middleware;
+namespace tonyanant\phpmvc\middleware;
 
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use tonyanant\phpmvc\Application;
+use tonyanant\phpmvc\exception\ForbiddenException;
 
 class AuthMiddleware extends BaseMiddleware
 {

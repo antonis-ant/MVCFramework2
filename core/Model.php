@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\core;
+namespace tonyanant\phpmvc;
 
 
 abstract class Model

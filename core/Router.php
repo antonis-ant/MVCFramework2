@@ -1,12 +1,12 @@
 <?php
 
-namespace app\core;
+namespace tonyanant\phpmvc;
 
-use app\core\exception\NotFoundException;
+use tonyanant\phpmvc\exception\NotFoundException;
 
 /**
  * Class Router
- * @package app\core
+ * @package tonyanant\phpmvc
  */
 class Router
 {
@@ -67,7 +67,7 @@ class Router
         }
         // Controller class method is given, instantiate new Controller object.
         if (is_array($callback)) {
-            /** @var \app\core\Controller $controller */
+            /** @var \tonyanant\phpmvc\Controller $controller */
             // Set new controller object in Application class
             $controller = new $callback[0]();
             Application::$app->controller = $controller;

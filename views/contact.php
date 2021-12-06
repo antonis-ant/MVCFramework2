@@ -1,5 +1,5 @@
 <?php
-/** @var  $this \app\core\View */
+/** @var  $this \tonyanant\phpmvc\View */
 /** @var  $model \app\models\ContactForm */
 
 $this->title = 'Contact';
@@ -7,7 +7,7 @@ $this->title = 'Contact';
 
 <h1>Contact us</h1>
 
-<?php $form = \app\core\form\Form::begin('', 'post') ?>
+<?php $form = \tonyanant\phpmvc\form\Form::begin('', 'post') ?>
     <?php echo $form->inputField($model, 'subject')?>
     <?php echo $form->inputField($model, 'email')?>
     <?php echo $form->textareaField($model, 'body')?>

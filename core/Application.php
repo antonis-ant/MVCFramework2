@@ -1,12 +1,12 @@
 <?php
 
-namespace app\core;
+namespace tonyanant\phpmvc;
 
-use app\core\db\Database;
+use tonyanant\phpmvc\db\Database;
 
 /**
  * Class Application
- * @package app\core
+ * @package tonyanant\phpmvc
  */
 class Application
 {
