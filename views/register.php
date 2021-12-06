@@ -4,7 +4,7 @@
 
 <h1>Register</h1>
 
-<?php $form = antonyanant\phpmvc\form\Form::begin('', "post") ?>
+<?php $form = app\core\form\Form::begin('', "post") ?>
     <!-- Firstname & lastname fields -->
     <div class="row">
         <div class="col">
@@ -28,4 +28,4 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
-<?php antonyanant\phpmvc\form\Form::end() ?>
+<?php app\core\form\Form::end() ?>

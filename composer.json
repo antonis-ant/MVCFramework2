@@ -1,19 +1,19 @@
 {
-    "name": "tony/mvc-framework2",
-    "autoload": {
-        "psr-4": {
-            "app\\": "."
-        }
-    },
-    "authors": [
-        {
-            "name": "tonyanant",
-            "email": "antonis.ant2011@gmail.com"
-        }
-    ],
-    "require": {
-        "vlucas/phpdotenv": "^5.3",
-      "ext-pdo": "*",
-        "antonyanant/php-mvc-core": "v1.0.4"
+  "name": "tony/mvc-framework2",
+  "autoload": {
+    "psr-4": {
+      "app\\": "."
     }
+  },
+  "authors": [
+    {
+      "name": "tonyanant",
+      "email": "antonis.ant2011@gmail.com"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.3",
+    "ext-pdo": "*",
+    "antonyanant/php-mvc-core": "v1.0.4"
+  }
 }

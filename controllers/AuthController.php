@@ -1,13 +1,13 @@
 <?php
 
 
-namespace app\controllers;
+namespace app\core\controllers;
 
-use antonyanant\phpmvc\Application;
-use antonyanant\phpmvc\Controller;
-use antonyanant\phpmvc\middleware\AuthMiddleware;
-use antonyanant\phpmvc\Request;
-use antonyanant\phpmvc\Response;
+use app\core\Application;
+use app\core\Controller;
+use app\core\middleware\AuthMiddleware;
+use app\core\Request;
+use app\core\Response;
 use app\models\LoginForm;
 use app\models\User;
 

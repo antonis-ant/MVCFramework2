@@ -3,10 +3,10 @@
 
 namespace app\controllers;
 
-use antonyanant\phpmvc\Application;
-use antonyanant\phpmvc\Controller;
-use antonyanant\phpmvc\Request;
-use antonyanant\phpmvc\Response;
+use app\core\Application;
+use app\core\Controller;
+use app\core\Request;
+use app\core\Response;
 use app\models\ContactForm;
 
 /**
