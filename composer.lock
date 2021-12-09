@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a1eaf09fdcf6303aba86604c6bbc274",
+    "content-hash": "47f5e0ccf7a0c977aebb93d63a8f738a",
     "packages": [
         {
             "name": "antonyanant/php-mvc-core",
@@ -412,6 +412,40 @@
             "time": "2021-07-28T13:41:28+00:00"
         },
         {
+            "name": "tonyanant/php-mvc-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tonyanant/ta-php-mvc-core.git",
+                "reference": "73bb34a42c290af7abae1b992197d6e78061150f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tonyanant/ta-php-mvc-core/zipball/73bb34a42c290af7abae1b992197d6e78061150f",
+                "reference": "73bb34a42c290af7abae1b992197d6e78061150f",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tonyanant\\phpmvc\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "tonyanant",
+                    "email": "antonis.ant2011@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/tonyanant/ta-php-mvc-core/issues",
+                "source": "https://github.com/tonyanant/ta-php-mvc-core/tree/v1.0.1"
+            },
+            "time": "2021-12-07T13:42:22+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.3.1",
             "source": {
@@ -493,7 +527,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tonyanant/php-mvc-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

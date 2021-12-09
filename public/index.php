@@ -24,7 +24,7 @@ $config = [
 $app = new Application(dirname(__DIR__), $config);
 $siteController = new SiteController();
 
-
+// AuthController routes
 $app->router->get('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->get('/logout', [AuthController::class, 'logout']); // *** Logout should happen with post method for security reasons!
@@ -32,7 +32,7 @@ $app->router->get('/profile', [AuthController::class, 'profile']);
 $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->post('/register', [AuthController::class, 'register']);
 
-
+// SiteController routes
 $app->router->get('/', [SiteController::class, 'home']);
 $app->router->get('/contact', [SiteController::class, 'contact']);
 $app->router->post('/contact', [SiteController::class, 'contact']);

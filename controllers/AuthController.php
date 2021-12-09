@@ -1,7 +1,7 @@
 <?php
 
 
-namespace tonyanant\phpmvc\controllers;
+namespace app\controllers;
 
 use tonyanant\phpmvc\Application;
 use tonyanant\phpmvc\Controller;

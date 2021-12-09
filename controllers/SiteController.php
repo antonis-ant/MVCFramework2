@@ -29,10 +29,11 @@ class SiteController extends Controller
             $contact->loadData($request->getBody());
             if ($contact->validate() && $contact->send()) {
                 Application::$app->session->setFlash('success', 'Thanks for contacting us.');
-                return $response->redirect('/contact');
+                $response->redirect('/contact');
+                return;
             }
         }
-
+        // Request is GET, just load contact view along with form field data (if there is any).
         return $this->render('contact', [
             'model' => $contact
         ]);
